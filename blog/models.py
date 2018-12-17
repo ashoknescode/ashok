@@ -1,3 +1,4 @@
+from wagtail.snippets.models import register_snippet
 from django.db import models
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
@@ -74,3 +75,5 @@ class BlogTagIndexPage(Page):
 		context = super().get_context(request)
 		context['blogpages'] = blogpages
 		return context
+
+
